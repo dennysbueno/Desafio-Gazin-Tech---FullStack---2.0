@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: backgazin
+    image: dennysbueno/node-gazintech2.0
+    build: ./backend
+    volumes:
+      - ./backend:/usr/app
+      - "/usr/app/node_modules"
+    ports:
+      - "3333:3333"
+
+  frontend:
+    container_name: frontgazin
+    build: ./frontend
+    volumes:
+      - ./frontend:/usr/app
+      - "/usr/app/node_modules"
+    ports:
+      - "3000:3000"

@@ -1,0 +1,11 @@
+# compiled output
+/dist
+/node_modules
+
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# Tests
+/coverage
+/.nyc_output
